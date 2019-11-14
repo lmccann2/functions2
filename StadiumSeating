@@ -1,0 +1,32 @@
+#Python 3.7.4
+#Levi McCann
+#CIS2187
+#Stadium Seating(5-7)
+#11/14/2019
+
+#define global constants
+SEATSA = 20
+SEATSB = 15
+SEATSC = 10
+
+#deine main function for inputs
+def main():
+  numseatsA = float(input("Enter count of A seats: "))
+  numseatsB = float(input("Enter count of B seats: "))
+  numseatsC = float(input("Enter count of C seats: "))
+#call calulate function  pass the variables
+  calcIncome(numseatsA, numseatsB, numseatsC)
+
+#calculate number of Seats and income, print the output
+def calcIncome(numseatsA, numseatsB, numseatsC):
+    incomeA = numseatsA * SEATSA
+    incomeB = numseatsB * SEATSA
+    incomeC = numseatsC * SEATSA
+    total = incomeA + incomeB + incomeC
+    print(f"Income from class A seats: ${incomeA:.2f}")
+    print(f"Income from class B seats: ${incomeB:.2f}")
+    print(f"Income from class C seats: ${incomeC:.2f}")
+    print(f"Total gross income from ticket sales: ${total:.2f}")
+
+#call main function
+main()
