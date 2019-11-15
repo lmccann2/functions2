@@ -1,0 +1,89 @@
+#Python 3.7.4
+#Levi McCann
+#11/14/2019
+#TestAverageandGrade(5-15)
+#CIS 2 --Jeff Hendrickson
+#https://repl.it/@lmccann42/TestAverageandGrade
+
+#calculates average grade
+def calc_average():
+#variable declaration ie local vars  
+  test1 = float(input("Enter score 1: "))
+  test2 = float(input("Enter score 2: "))
+  test3 = float(input("Enter score 3: "))
+  test4 = float(input("Enter score 4: "))
+  test5 = float(input("Enter score 5: "))
+  avgscore = (test1 + test2 + test3 + test4 + test5) / 5
+  determine_grade(test1, test2, test3, test4, test5)
+  #Look no loops, only if then statements
+  if 100 >= avgscore >= 90:
+    print("Average Score:", avgscore, "\t A")
+  elif 90 > avgscore >= 80:
+    print("Average Score:", avgscore, "\t B")
+  elif 80 > avgscore >= 70:
+    print("Average Score:", avgscore, "\t C")
+  elif 70 > avgscore >= 60:
+    print("Average Score:", avgscore, "\t D")
+  else:
+    print("Average Score:", avgscore, "\t F")
+    
+#function for print line of test scores
+def determine_grade(test1, test2, test3, test4, test5):
+  print("Score\tNumeric Grade\tLetter Grade")
+  print("----------------------------------")
+  if 100 >= test1 >= 90:
+    print("Score 1:", test1, "\t\t A")
+  elif 90 > test1 >= 80:
+    print("Score 1:", test1, "\t\t B")
+  elif 80 > test1 >= 70:
+    print("Score 1:", test1, "\t\t C")
+  elif 70 > test1 >= 60:
+    print("Score 1:", test1, "\t\t D")
+  else:
+    print("Score 1:", test1, "\t\t F")
+  
+  if 100 >= test2 >= 90:
+    print("Score 2:", test2, "\t\t A")
+  elif 90 > test2 >= 80:
+    print("Score 2:", test2, "\t\t B")
+  elif 80 > test2 >= 70:
+    print("Score 2:", test2, "\t\t C")
+  elif 70 > test2 >= 60:
+    print("Score 2:", test2, "\t\t D")
+  else:
+    print("Score 2:", test2, "\t\t F")
+  
+  if 100 >= test3 >= 90:
+    print("Score 3:", test3, "\t\t A")
+  elif 90 > test3 >= 80:
+    print("Score 3:", test3, "\t\t B")
+  elif 80 > test3 >= 70:
+    print("Score 3:", test3, "\t\t C")
+  elif 70 > test3 >= 60:
+    print("Score 3:", test3, "\t\t D")
+  else:
+    print("Score 3:", test3, "\t\t F")
+  
+  if 100 >= test4 >= 90:
+    print("Score 4:", test4, "\t\t A")
+  elif 90 > test4 >= 80:
+    print("Score 4:", test4, "\t\t B")
+  elif 80 > test4 >= 70:
+    print("Score 4:", test4, "\t\t C")
+  elif 70 > test4 >= 60:
+    print("Score 4:", test4, "\t\t D")
+  else:
+    print("Score 4:", test4, "\t\t F")
+  
+  if 100 >= test5 >= 90:
+    print("Score 5:", test5, "\t\t A")
+  elif 90 > test5 >= 80:
+    print("Score 5:", test5, "\t\t B")
+  elif 80 > test5 >= 70:
+    print("Score 5:", test5, "\t\t C")
+  elif 70 > test5 >= 60:
+    print("Score 5:", test5, "\t\t D")
+  else:
+    print("Score 5:", test5, "\t\t F")
+  print("----------------------------------")
+calc_average()
