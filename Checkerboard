@@ -1,0 +1,49 @@
+#Python 3.7.4
+#Levi McCann
+#11/15/2019
+#CIS2187
+#CheckerBoard turtle(5-25)
+#https://repl.it/@lmccann42/Checkerboard
+
+import turtle
+
+def square(x, y, width, color):
+    turtle.penup()            # Raise the pen
+    turtle.goto(x, y)         # Move to (X,Y)
+    turtle.fillcolor(color)   # Set the fill color
+    turtle.pendown()          # Lower the pen
+    turtle.begin_fill()       # Start filling the shape
+    for count in range(4):    # Draw a square
+        turtle.forward(width)
+        turtle.left(90)
+    turtle.end_fill()
+#Make boarder for checkerboard lightblue
+square(-215, -25, 285, 'lightblue')
+
+#start making the squares, start with black
+square(-200, 150, 50, 'black')
+square(-150, 150, 50, 'white')
+square(-100, 150, 50, 'black')
+square(-50, 150, 50, 'white')
+square(0, 150, 50, 'black')
+#Next row
+#Start with white squares
+square(-200, 100, 50, 'white')
+square(-150, 100, 50, 'black')
+square(-100, 100, 50, 'white')
+square(-50, 100, 50, 'black')
+square(0, 100, 50, 'white')
+#Next row
+#switch to black squares first again
+square(-200, 50, 50, 'black')
+square(-150, 50, 50, 'white')
+square(-100, 50, 50, 'black')
+square(-50, 50, 50, 'white')
+square(0, 50, 50, 'black')
+#Next row
+#switch to white first
+square(-200, 0, 50, 'white')
+square(-150, 0, 50, 'black')
+square(-100, 0, 50, 'white')
+square(-50, 0, 50, 'black')
+square(0, 0, 50, 'white')
