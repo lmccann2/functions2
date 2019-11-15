@@ -1,0 +1,38 @@
+#Python 3.7.4
+#Levi McCann
+#CIS2 
+#Percentages(3-5)
+
+#Create an application whose main function
+#holds two float values input by a user, stored as variables.
+#Pass both variables to a function named computePercent that displays
+#the two values and the value of the first number as a percentage of
+#the second one. For example, if the numbers are 2.0 and 5.0,
+#the function should display a statement similar to "2.0 is 40.0 percent
+#of 5.0." Then, call the function a second time, passing the values in
+#reverse order.
+
+#Sample run:
+
+#Enter a float: 2.0
+#Enter another float: 5.0
+#2.0 is 40.0 percent of 5.0
+#5.0 is 250.0 percent of 2.0
+
+def main():
+    num1 = float(input("Please enter a float: "))
+    num2 = float(input("Please enter another float: "))
+#CALL computePercent function
+    computePercent(num1, num2)
+
+    
+#function def computePercent(num1, num2):
+def computePercent(num1, num2):
+    computePercent = 100 / num2 * num1
+    print(f"{num1:.2f} is: {computePercent:.2f}%. of {num2:.2f}.")
+#reverse the output order and percentages
+    computePercent = 100 / num1 * num2
+    print(f"{num2:.2f} is: {computePercent:.2f}%. of {num1:.2f}.")
+#    return computePercent does not return in Program
+#Call the main
+main()
