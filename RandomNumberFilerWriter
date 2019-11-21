@@ -1,0 +1,36 @@
+#Python 3.7.4
+#Levi McCann
+#11/21/2019
+#Random Number File Writer (6-7)
+
+import random
+
+def generateRandomNumber():
+  randomNumber = random.randint(1,500)
+  return randomNumber
+
+
+def main():
+  #Added in exception handling try this 1st
+  try:
+      numOfRandomNums = int(input("How many numbers " + \
+      "should the random number file hold? "))
+
+      randomNumbers = open("randomnumbers.txt", "w")
+  #If you get an error, print error message and exit program
+  except:
+      print("An error has occurred. ")
+  else:
+        #Generate Random Numbers and write them to file
+        for randonNumCount in range(1, numOfRandomNums + 1):
+          randomNumber = generateRandomNumber()
+          #Put numbers as strings in file with new line so aligned vertically
+          randomNumbers.write(str(randomNumber)+"\n")
+
+  finally:
+          randomNumbers.close()
+          print("End of Program" + "\n")
+          print("End of Line")
+
+
+main()
