@@ -1,0 +1,33 @@
+#Python 3.7.4
+#Levi McCann
+#CIS 2
+#Hendrickson
+#11/21/2019
+#Item Counter (PC6-4)
+
+
+def main():
+
+
+  myfile = open("names.txt", "r")
+  line = myfile.readline()
+  numberofLines = 0
+
+#  for line in myfile:
+#    print(line)
+#    print((line), end ="")
+#These are commented out make sure indentation is correct if re-used
+#    line = myfile.readline()
+  
+#    line = myfile.readline()
+  while line != "":
+    
+    print(line,end="")
+    #ADD COUNTER AND ADD NUMBER TO LINE COUNTER
+    numberofLines = numberofLines + 1
+    line = myfile.readline() 
+
+  myfile.close()
+#Print how many lines are in the file that was read
+  print("The file has ", numberofLines, "lines.")
+main()
