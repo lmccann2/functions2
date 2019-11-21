@@ -1,0 +1,27 @@
+#Python 3.7.4
+#Levi McCann
+#11/21/2019
+#AverageOfNumbers (PC6-6)
+#CIS 2
+
+def main():
+  numbersFile = open("numbers.txt", "r")
+  #Create variables for function
+  numberofLines = 0
+  total = 0
+  line = numbersFile.readline()
+
+  for line in numbersFile:
+    #Count the number of lines
+    numberofLines = numberofLines + 1
+    #Convert to int or float from string
+    total = total + float(line)
+    line = numbersFile.readline()
+
+  #Calculate Average
+  average = total / numberofLines
+  print("The Average is ", average, ".")
+   # Close the file. do not need the line below
+ # numbersFiles.close()
+
+main()
