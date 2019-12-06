@@ -1,0 +1,34 @@
+#Python 3.7.4
+#Levi McCann
+#12/6/2019
+#Lottery Number Generator(7-2)
+#Hendrickson
+
+
+import random
+
+MAX_DIGITS = 7
+START = 0
+END = 9
+
+def main():
+  #create a list
+  numbers =  [0] * 7
+
+#  print(numbers)
+#numbers
+
+  for index in range(MAX_DIGITS):
+    numbers[index] = random.randint(START, END)
+    print("Here are you lottery numbers: ")
+    print(numbers)
+
+#Below is another way to do the lottery generator with
+#The append statement
+#num = []
+#for count in range(MAX_DIGITS):
+#  num.append(random.randint(START, END))
+#  print("Here are you lottery numbers: ")
+#  print(num)
+
+main()
