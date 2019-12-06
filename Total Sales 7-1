@@ -1,0 +1,45 @@
+#Python 3.7.4
+#Levi McCann
+#12/6/2019
+#Total Sales(PC7-1)
+#Hendrickson
+
+#Define function for daily Sales
+def enterdailySales(days_of_week):
+#Define list
+  dailySales = []
+  for currentDay in days_of_week:
+    print("Please enter sales for ", currentDay)
+    dailySale = float( input() )
+    dailySales.append(dailySale)
+
+
+  return dailySales
+#define function for weekly sales
+def calcWeeklySales(dailySales):
+  total = 0
+
+  for currentDaySale in range(len(dailySales)):
+    total = total + dailySales[currentDaySale]
+
+
+  return total
+
+#Define Print Weekly Report Function for Sales
+def printWeeklyReport(days_of_week, dailySales, totalSales):
+
+  print("\n WEEKLY SALES REPORT \n-----------------------")
+  for currentDay in range(len(days_of_week)):
+    print( days_of_week[currentDay] + "'s  Sales ", "$" + format( dailySales[currentDay], ".2f") )
+    print("\n Total Weekly Sales ", totalSales)
+
+#Define main function and list of days_of_week to call other functions
+def main():
+  days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+
+  dailySales = enterdailySales(days_of_week)
+  totalWeeklySales = calcWeeklySales(dailySales) 
+  printWeeklyReport(days_of_week, dailySales, totalWeeklySales)
+
+main()
