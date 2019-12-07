@@ -1,0 +1,30 @@
+#python 3.7.4
+#Levi McCann
+#12/6/2019
+#Speed Conversion (5-5)
+#CIS 2 Hendrickson
+
+def askuserforKm():
+  userKm = float(input("How may kilometers have " + \
+  "you traveled? "))
+  return userKm
+#covert to miles
+def coverttoMiles(userKm):
+  miles = userKm * .6214
+  return miles
+
+#main function convert and print
+def main():
+  userKm = askuserforKm()
+  miles = userKm *.6214
+  convertedmiles = coverttoMiles(userKm)
+#print user input km to miles  
+  print(userKm, "kilometers coverted to" +\
+   " miles is",convertedmiles, "miles.")
+  
+  #loop range 40 to 120 increment 10 km/Hr to miles and #print
+  for userKm in range (40, 130, 10):
+      print(userKm, "kilometers coverted to" +\
+   " miles is",(userKm * .6241), "miles.")
+
+main()
