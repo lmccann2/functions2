@@ -1,0 +1,28 @@
+#Python 3.7.4
+#Levi McCann
+#12/6/2019
+#MaxOfTwoValues(5-12)
+#CIS 2 Hendrickson
+
+#define functions and variables
+def max(userfirstnum, usersecondnum):
+ #if to get max num
+  if userfirstnum > usersecondnum:
+    return userfirstnum
+  else: 
+    return usersecondnum
+    
+ #function to get input from user  
+def getNumFromUser():
+  userfirstnum = float(input("Please enter the first number: "))
+  usersecondnum = float(input("Please enter the second number: "))
+
+  return userfirstnum, usersecondnum
+  
+#function to run program and call other function and print max num
+def main():
+  userfirstnum, usersecondnum = getNumFromUser()
+  print("The maximum number between",userfirstnum, "and", \
+  usersecondnum, "is",  max(userfirstnum, usersecondnum))
+
+main()
