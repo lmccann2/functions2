@@ -1,0 +1,24 @@
+#Python 3.7.4
+#Levi McCann
+#12/6/2019
+#PIN Check 
+#CIS 2
+#Hendrickson
+
+
+#Define main function to compare input with list of PINs
+def main():
+#  pinfile = open('pin.txt', 'r')
+
+#Convert the input to a string to compare against list 
+  pin = str(input("Please Enter a valid pin number: "))
+  intpin = ["0123", "0636", "4444", "7777"]
+
+  if pin in intpin:
+      print("You entered a Valid PIN.")
+#strings or integers?
+# strings because ints can't begin with 0
+  else:
+      print("You entered an Invalid PIN.")
+
+main()
