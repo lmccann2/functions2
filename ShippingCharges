@@ -1,0 +1,27 @@
+#Python 3.7.4
+#Levi McCann
+#12/7/2019
+#CIS 2 Hendrickson
+#Shipping Charges (3-13)
+
+
+# define main function get weight entered by user the
+#calulate shipping price and print
+def main():
+  userweightOfPkg = float(input("Please enter " \
+ "the weight of the package. "))
+
+  if userweightOfPkg <= 2:
+    shippingCharge = 5.50
+  elif userweightOfPkg > 2 and userweightOfPkg <=6:
+    shippingCharge= 7.00
+  elif userweightOfPkg > 6 and userweightOfPkg <=10:
+    shippingCharge = 9.75
+  else:
+    userweightOfPkg > 10
+    shippingCharge = 15.50
+
+  print("For a package weighing " + str(userweightOfPkg) +\
+  ", you will pay $" + format(shippingCharge, ",.2f"))
+
+main()
