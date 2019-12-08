@@ -1,0 +1,51 @@
+#Python 3.7.4
+#Levi McCann
+#12/7/2019
+#Random Numbers Guessing Game (CPP5-12)
+#CIS 2 Hendrickson
+
+
+import random
+
+def genRandomNum():
+  randomNum = random.randint(1, 100)
+  return randomNum
+
+def askUserForNum(message = "Guess the number: "):
+ userNum = int(input(message))
+ return userNum
+
+def checkUserNum(userNum, randomNum):
+  if userNum > randomNum:
+       return "Too High."
+  elif userNum < randomNum:
+       return "Too Low."
+  else:
+#The line below is not needed
+#     userNum == randomNum:
+      return "Congratulations!"
+
+def main():
+  userCongrat = False
+  letStart = True
+
+  while userCongrat or letStart:
+    userGuess = 0
+    randomNum = genRandomNum()
+    userNum = askUserForNum()
+    userGuess += 1
+    message = checkUserNum(userNum, randomNum)
+
+    while message != "Congratulations!":
+      print(message)
+      userNum = askUserForNum("Try Again.")
+      userGuess += 1
+      message = checkUserNum(userNum, randomNum)
+
+    print()
+    print(message, "It took you ", userGuess,\
+     "to guess correctly")
+    userCongrat = True
+
+
+main()
