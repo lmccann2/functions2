@@ -1,0 +1,20 @@
+#Python 3.7.4
+#Levi McCann
+#12/7/2019
+#Vacation Days
+#CIS 2 Hendrickson
+
+def main():
+  seconds = float(input("Please enter the days you" +\
+ " will be on vacation. ")) * 3600 * 24
+  day = int(seconds / 86400)
+  hour = int(((seconds % 86400) /3600))
+  min = int((((seconds % 86400) % 3600) /60))
+  second = int(((seconds % 86400) % 3600) % 60)
+  print(str(day) + " days, "+ str(hour) + " hours, " + \
+  str(min) + " minutes, " + str(second) + " seconds")
+
+
+  print("That is equivalent to: \n ")
+  print("d:h:m:s-> %d:%d:%d:%d" %(day, hour, min, seconds))
+main()
